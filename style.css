@@ -1,5 +1,14 @@
-/* Basic Reset */
-* {
+
+
+
+
+
+
+
+
+
+ /*  
+ {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,7 +20,7 @@ body {
     padding: 20px;
 }
 
-/* Header */
+
 header {
     text-align: center;
     background-color: #2c3e50;
@@ -31,7 +40,7 @@ header p {
     opacity: 0.9;
 }
 
-/* Controls */
+
 .controls {
     text-align: center;
     margin-bottom: 20px;
@@ -70,7 +79,7 @@ header p {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Map Container */
+
 .map-container {
     position: relative;
     max-width: 900px;
@@ -88,7 +97,7 @@ header p {
     border-radius: 8px;
 }
 
-/* Map Elements */
+
 .water {
     fill: #3498db;
     opacity: 0.7;
@@ -104,7 +113,7 @@ header p {
     fill: #d5dbdb;
 }
 
-/* Stations */
+/
 .station {
     cursor: pointer;
     stroke: white;
@@ -124,7 +133,7 @@ header p {
     opacity: 0.8;
 }
 
-/* Legend */
+/
 .legend {
     position: absolute;
     top: 30px;
@@ -163,7 +172,7 @@ header p {
     background-color: #e74c3c;
 }
 
-/* Info Box */
+/
 .info-box {
     position: absolute;
     background-color: #2c3e50;
@@ -190,13 +199,13 @@ header p {
     color: #ecf0f1;
 }
 
-/* Text Labels */
+/*
 text {
     font-family: Arial, sans-serif;
     pointer-events: none;
 }
 
-/* Responsive Design */
+/
 @media (max-width: 768px) {
     body {
         padding: 10px;
@@ -244,3 +253,4 @@ text {
         height: 350px;
     }
 }
+*/

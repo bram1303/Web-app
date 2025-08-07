@@ -33,11 +33,11 @@ async function getAllRecords() {
         
         
     <div class="card" style="width: 18rem;">
- ${
+ <a href="police.html?id=${data.records[i].id}">${
           image
             ? `<img class="card-img-top rounded" alt="${name}" src="${image[0].url}">`
             : ``
-        }
+        }</a>
   <div class="card-body">
     <h2 class="card-text">${name}</h2>
     <p class="card-text">${address}</p>
@@ -52,7 +52,58 @@ async function getAllRecords() {
     });
 }
 
+// function for our detail view
+async function getOneRecord(id) {
+  let jobsResultElement = document.getElementById("stations");
 
+  const options = {
+    method: "GET",
+    headers: {
+      Authorization: `Bearer patlN7lFJDjr0bXKm.21979782974675bc45bb920b61ba4fdb17c5764fe5540b8a3ec39c6c585a172f`,
+    },
+  };
+
+  await fetch(
+    `https://api.airtable.com/v0/appZSaLixrkPZ7PTk/Fire/${id}`,
+    options
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data); // response is a single object
+
+      let image = data.fields["Images"];
+      let name = data.fields["Corporation"];
+      let address = data.fields["Address"];
+      let map = data.fields["Directions"];
+      
+      let phone = data.fields["Phone"];
+     
+
+      let newHtml = `
+       <div class="card" style="width: 18rem;">
+  ${
+          image
+            ? `<img class="card-img-top rounded" alt="${name}" src="${image[0].url}">`
+            : ``
+        }
+  <div class="card-body">
+    <h5 class="card-title">${name}</h5>
+    
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">${address}</li>
+    <li class="list-group-item">${phone}</li>
+    <li class="list-group-item">A third item</li>
+  </ul>
+  <div class="card-body">
+    <a href="${map}" target="_blank" class="btn btn-primary">Directions</a>
+  </div>
+</div>
+      `;
+
+      jobsResultElement.innerHTML = newHtml;
+    });
+}
 
 // look up window.location.search and split, so this would take
 // https://dmspr2021-airtable-app.glitch.me/index.html?id=receHhOzntTGZ44I5
