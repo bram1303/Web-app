@@ -12,10 +12,7 @@ async function getAllRecords() {
     },
   };
 
-  await fetch(
-    `https://api.airtable.com/v0/appZSaLixrkPZ7PTk/Fire`,
-    options
-  )
+  await fetch(`https://api.airtable.com/v0/appZSaLixrkPZ7PTk/Fire`, options)
     .then((response) => response.json())
     .then((data) => {
       console.log(data); // response is an object w/ .records array
@@ -33,7 +30,7 @@ async function getAllRecords() {
         
         
     <div class="card" style="width: 18rem;">
- <a href="police.html?id=${data.records[i].id}">${
+ <a href="fire.html?id=${data.records[i].id}">${
           image
             ? `<img class="card-img-top rounded" alt="${name}" src="${image[0].url}">`
             : ``
@@ -75,17 +72,16 @@ async function getOneRecord(id) {
       let name = data.fields["Corporation"];
       let address = data.fields["Address"];
       let map = data.fields["Directions"];
-      
+
       let phone = data.fields["Phone"];
-     
 
       let newHtml = `
        <div class="card" style="width: 18rem;">
   ${
-          image
-            ? `<img class="card-img-top rounded" alt="${name}" src="${image[0].url}">`
-            : ``
-        }
+    image
+      ? `<img class="card-img-top rounded" alt="${name}" src="${image[0].url}">`
+      : ``
+  }
   <div class="card-body">
     <h5 class="card-title">${name}</h5>
     
@@ -93,7 +89,7 @@ async function getOneRecord(id) {
   <ul class="list-group list-group-flush">
     <li class="list-group-item">${address}</li>
     <li class="list-group-item">${phone}</li>
-    <li class="list-group-item">A third item</li>
+    <li class="list-group-item">...</li>
   </ul>
   <div class="card-body">
     <a href="${map}" target="_blank" class="btn btn-primary">Directions</a>

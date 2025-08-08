@@ -93,7 +93,7 @@ async function getOneRecord(id) {
   <ul class="list-group list-group-flush">
     <li class="list-group-item">${address}</li>
     <li class="list-group-item">${phone}</li>
-    <li class="list-group-item">A third item</li>
+    <li class="list-group-item">...</li>
   </ul>
   <div class="card-body">
     <a href="${map}" target="_blank" class="btn btn-primary">Directions</a>

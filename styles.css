@@ -1,0 +1,194 @@
+/* Safe Areas San Francisco - CSS */
+/* Tarjetas siempre lado a lado */
+
+body {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%) !important;
+    min-height: 100vh !important;
+    font-family: 'Arial', sans-serif !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    min-height: 100vh !important;
+    padding: 20px !important;
+    max-width: none !important;
+}
+
+/* Título h1 */
+.container h1 {
+    color: white !important;
+    text-align: center !important;
+    margin-bottom: 40px !important;
+    font-size: 2.2rem !important;
+    font-weight: 600 !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Container-fluid centrado */
+.container-fluid.text-center {
+    max-width: 800px !important;
+    width: 100% !important;
+}
+
+/* Row - */
+.container-fluid .row {
+    display: flex !important;
+    flex-direction: row !important; /* Fuerza fila horizontal */
+    justify-content: center !important;
+    align-items: flex-start !important;
+    gap: 2rem !important;
+    flex-wrap: nowrap !important; /* No permite que se envuelvan */
+}
+
+/* Columnas -  */
+.container-fluid .row .col {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    flex: 0 0 auto !important;
+    max-width: none !important; /* Elimina restricciones de ancho de Bootstrap */
+    width: auto !important; /* Ancho automático */
+}
+
+/* Estilos para las tarjetas */
+.container .card {
+    width: 16rem !important; 
+    max-width: 16rem !important;
+    min-width: 16rem !important; /* Ancho mínimo fijo */
+    border: none !important;
+    border-radius: 15px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+    transition: all 0.3s ease !important;
+    background: white !important;
+    overflow: hidden !important;
+    position: relative !important;
+    animation: fadeInUp 0.6s ease-out !important;
+    margin: 0 !important; 
+}
+
+.container .card:nth-child(1) {
+    animation-delay: 0.1s !important;
+}
+
+.container .card:nth-child(2) {
+    animation-delay: 0.3s !important;
+}
+
+.container .card:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Imágenes de las tarjetas */
+.container .card .card-img-top {
+    height: 180px !important;
+    object-fit: cover !important;
+    transition: transform 0.3s ease !important;
+    width: 100% !important;
+}
+
+.container .card:hover .card-img-top {
+    transform: scale(1.05) !important;
+}
+
+/* Cuerpo de las tarjetas */
+.container .card .card-body {
+    padding: 20px !important;
+    background: white !important;
+}
+
+.container .card .card-text {
+    color: #666 !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    text-align: center !important;
+}
+
+.container .card a {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+.container .card a:hover {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+/* para mantener la imagen fija a los lados */
+@media (max-width: 768px) {
+    .container h1 {
+        font-size: 1.8rem !important;
+        margin-bottom: 30px !important;
+    }
+    
+    .container .card {
+        width: 14rem !important;
+        min-width: 14rem !important;
+        max-width: 14rem !important;
+    }
+    
+    .container-fluid .row {
+        gap: 1.5rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .container h1 {
+        font-size: 1.5rem !important;
+    }
+    
+    .container .card {
+        width: 12rem !important;
+        min-width: 12rem !important;
+        max-width: 12rem !important;
+    }
+    
+    .container-fluid .row {
+        gap: 1rem !important;
+    }
+    
+    .container .card .card-img-top {
+        height: 150px !important;
+    }
+    
+    .container .card .card-body {
+        padding: 15px !important;
+    }
+    
+    .container .card .card-text {
+        font-size: 12px !important;
+    }
+}
+
+/* Para pantallas MUY pequeñas aun lado a lado pero más pequeñas */
+@media (max-width: 400px) {
+    .container .card {
+        width: 10rem !important;
+        min-width: 10rem !important;
+        max-width: 10rem !important;
+    }
+    
+    .container-fluid .row {
+        gap: 0.5rem !important;
+    }
+    
+    .container .card .card-img-top {
+        height: 120px !important;
+    }
+    
+    .container .card .card-body {
+        padding: 10px !important;
+    }
+    
+    .container .card .card-text {
+        font-size: 11px !important;
+    }
+}
+
+
