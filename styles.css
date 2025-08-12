@@ -1,5 +1,4 @@
-/* Safe Areas San Francisco - CSS */
-/* Tarjetas siempre lado a lado */
+
 
 body {
     background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%) !important;
@@ -28,6 +27,11 @@ body {
     font-size: 2.2rem !important;
     font-weight: 600 !important;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+
+}
+/* Enlaces */
+.container a {
+    color: #000000 !important;
 }
 
 /* Container-fluid centrado */
@@ -39,11 +43,11 @@ body {
 /* Row - */
 .container-fluid .row {
     display: flex !important;
-    flex-direction: row !important; /* Fuerza fila horizontal */
+    flex-direction: row !important; 
     justify-content: center !important;
     align-items: flex-start !important;
     gap: 2rem !important;
-    flex-wrap: nowrap !important; /* No permite que se envuelvan */
+    flex-wrap: nowrap !important; 
 }
 
 /* Columnas -  */
@@ -52,15 +56,15 @@ body {
     justify-content: center !important;
     align-items: flex-start !important;
     flex: 0 0 auto !important;
-    max-width: none !important; /* Elimina restricciones de ancho de Bootstrap */
-    width: auto !important; /* Ancho automático */
+    max-width: none !important; 
+    width: auto !important; 
 }
 
 /* Estilos para las tarjetas */
 .container .card {
     width: 16rem !important; 
     max-width: 16rem !important;
-    min-width: 16rem !important; /* Ancho mínimo fijo */
+    min-width: 16rem !important; 
     border: none !important;
     border-radius: 15px !important;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
@@ -166,7 +170,7 @@ body {
     }
 }
 
-/* Para pantallas MUY pequeñas aun lado a lado pero más pequeñas */
+/* Para pantallas muy pequeñas aun lado a lado pero más pequeñas */
 @media (max-width: 400px) {
     .container .card {
         width: 10rem !important;
