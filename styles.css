@@ -19,6 +19,15 @@ body {
     max-width: none !important;
 }
 
+a {
+    color:#000000 !important;   
+    text-decoration: none !important;
+}
+
+h1 {
+    color:#000000;
+}
+
 /* Título h1 */
 .container h1 {
     color: white !important;
