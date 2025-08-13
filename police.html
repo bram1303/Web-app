@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Safe Areas - San Francisco</title>
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles2.css">
     <style>
               body {
                   background-color: #f0f0f0; 
@@ -22,191 +23,11 @@
 <body>
     
     <div class="container">
-        <h1>🚔<a href="fire.html">  🚒</a>--<a href="index.html">Safe Areas -- San francisco</a> </h1>
-
+        <h1>🚔 <a class="linkcolor" href="fire.html">🚒</a> --  <a class="linkcolor" href="index.html">Safe Areas -- San Francisco</a> </h1>
         <!--container with id 'brews' where JavaScript pushes the Airtable data -->
     <div class="container-fluid tables">
       <div class="row g-3" id="stations"></div>
     </div>
-        <!--
-        <div class="content-wrapper">
-            <div class="map-container">
-                <div class="map-image">
-                    <div class="sf-outline"></div>
-                    <div class="golden-gate"></div>
-                    <div class="bay-bridge"></div>
-                    
-                     Marcadores de Policía 
-                    <div class="station-marker police-marker marker-1" data-station="Central Station" data-type="police"></div>
-                    <div class="station-marker police-marker marker-2" data-station="Northern Station" data-type="police"></div>
-                    <div class="station-marker police-marker marker-3" data-station="Park Station" data-type="police"></div>
-                    <div class="station-marker police-marker marker-4" data-station="Richmond Station" data-type="police"></div>
-                    <div class="station-marker police-marker marker-5" data-station="Tenderloin Station" data-type="police"></div>
-                    <div class="station-marker police-marker marker-6" data-station="Mission Station" data-type="police"></div>
-                    <div class="station-marker police-marker marker-7" data-station="Southern Station" data-type="police"></div>
-                    <div class="station-marker police-marker marker-8" data-station="Ingleside Station" data-type="police"></div>
-                    <div class="station-marker police-marker marker-9" data-station="Bayview Station" data-type="police"></div>
-                    <div class="station-marker police-marker marker-10" data-station="Taraval Station" data-type="police"></div>
-                    
-                    <!-- Marcadores de Bomberos 
-                    <div class="station-marker fire-marker marker-11" data-station="Estación de Bomberos 1" data-type="fire"></div>
-                    <div class="station-marker fire-marker marker-12" data-station="Estación de Bomberos 2" data-type="fire"></div>
-                    <div class="station-marker fire-marker marker-13" data-station="Estación de Bomberos 3" data-type="fire"></div>
-                    <div class="station-marker fire-marker marker-14" data-station="Estación de Bomberos 4" data-type="fire"></div>
-                    <div class="station-marker fire-marker marker-15" data-station="Estación de Bomberos 5" data-type="fire"></div>
-                    <div class="station-marker fire-marker marker-16" data-station="Estación de Bomberos 6" data-type="fire"></div>
-                    <div class="station-marker fire-marker marker-17" data-station="Estación de Bomberos 7" data-type="fire"></div>
-                    <div class="station-marker fire-marker marker-18" data-station="Estación de Bomberos 8" data-type="fire"></div>
-                    <div class="station-marker fire-marker marker-19" data-station="Estación de Bomberos 9" data-type="fire"></div>
-                    <div class="station-marker fire-marker marker-20" data-station="Estación SFO" data-type="fire"></div>
-                </div>
-            </div>
-
-            <div class="legend">
-                <div class="emergency-info">
-                    <h3>🚨 EMERGENCY</h3>
-                    <p><strong>911</strong> - Emergency</p>
-                    <p><strong>415-553-0123</strong> - Non-Emergency</p>
-                </div>
-
-                <h2>📍 Station legends</h2>
-
-                <div class="legend-section">
-                    <h3>
-                        <span class="legend-icon police-marker"></span>
-                        Police Stations
-                    </h3>
-                    
-                    <div class="station-item" data-station-id="central">
-                        <div class="station-name">Central Station</div>
-                        <div class="station-address">766 Vallejo Street, San Francisco, CA 94133</div>
-                        <div class="station-phone">📞 415-315-2400</div>
-                    </div>
-
-                    <div class="station-item" data-station-id="northern">
-                        <div class="station-name">Northern Station</div>
-                        <div class="station-address">1125 Fillmore Street, San Francisco, CA 94115</div>
-                        <div class="station-phone">📞 415-614-3400</div>
-                    </div>
-
-                    <div class="station-item" data-station-id="park">
-                        <div class="station-name">Park Station</div>
-                        <div class="station-address">1899 Waller Street, San Francisco, CA 94117</div>
-                        <div class="station-phone">📞 415-242-3000</div>
-                    </div>
-
-                    <div class="station-item" data-station-id="richmond">
-                        <div class="station-name">Richmond Station</div>
-                        <div class="station-address">461 - 6th Ave, San Francisco, CA 94118</div>
-                        <div class="station-phone">📞 415-666-8000</div>
-                    </div>
-
-                    <div class="station-item" data-station-id="tenderloin">
-                        <div class="station-name">Tenderloin Station</div>
-                        <div class="station-address">301 Eddy Street, San Francisco, CA 94102</div>
-                        <div class="station-phone">📞 415-345-7300</div>
-                    </div>
-
-                    <div class="station-item" data-station-id="mission">
-                        <div class="station-name">Mission Station</div>
-                        <div class="station-address">630 Valencia St., San Francisco, CA 94110</div>
-                        <div class="station-phone">📞 415-558-5400</div>
-                    </div>
-
-                    <div class="station-item" data-station-id="southern">
-                        <div class="station-name">Southern Station</div>
-                        <div class="station-address">1251 3rd Street, San Francisco, CA 94158</div>
-                        <div class="station-phone">📞 415-575-6000</div>
-                    </div>
-
-                    <div class="station-item" data-station-id="ingleside">
-                        <div class="station-name">Ingleside Station</div>
-                        <div class="station-address">1 Sgt. John V. Young Lane, San Francisco, CA 94112</div>
-                        <div class="station-phone">📞 415-404-4000</div>
-                    </div>
-
-                    <div class="station-item" data-station-id="bayview">
-                        <div class="station-name">Bayview Station</div>
-                        <div class="station-address">201 Williams Avenue, San Francisco, CA 94124</div>
-                        <div class="station-phone">📞 415-671-2300</div>
-                    </div>
-
-                    <div class="station-item" data-station-id="taraval">
-                        <div class="station-name">Taraval Station</div>
-                        <div class="station-address">2345 24th Ave., San Francisco, CA 94116</div>
-                        <div class="station-phone">📞 415-759-3100</div>
-                    </div>
-                </div>
-
-                <div class="legend-section">
-                    <h3>
-                        <span class="legend-icon fire-marker"></span>
-                        Fire Stations
-                    </h3>
-                    
-                    <div class="station-item fire-station" data-station-id="fire1">
-                        <div class="station-name">Estación 1</div>
-                        <div class="station-address">676 Howard Street, San Francisco, CA 94105</div>
-                        <div class="station-phone">📞 415-558-3200</div>
-                    </div>
-
-                    <div class="station-item fire-station" data-station-id="fire2">
-                        <div class="station-name">Estación 2</div>
-                        <div class="station-address">1340 Powell Street, San Francisco, CA 94133</div>
-                        <div class="station-phone">📞 415-558-3300</div>
-                    </div>
-
-                    <div class="station-item fire-station" data-station-id="fire3">
-                        <div class="station-name">Estación 3</div>
-                        <div class="station-address">1067 Post Street, San Francisco, CA 94109</div>
-                        <div class="station-phone">📞 415-558-3400</div>
-                    </div>
-
-                    <div class="station-item fire-station" data-station-id="fire4">
-                        <div class="station-name">Estación 4</div>
-                        <div class="station-address">1295 Shafter Avenue, San Francisco, CA 94124</div>
-                        <div class="station-phone">📞 415-558-3500</div>
-                    </div>
-
-                    <div class="station-item fire-station" data-station-id="fire5">
-                        <div class="station-name">Estación 5</div>
-                        <div class="station-address">1301 Turk Street, San Francisco, CA 94115</div>
-                        <div class="station-phone">📞 415-558-3600</div>
-                    </div>
-
-                    <div class="station-item fire-station" data-station-id="fire6">
-                        <div class="station-name">Estación 6</div>
-                        <div class="station-address">135 Sanchez Street, San Francisco, CA 94114</div>
-                        <div class="station-phone">📞 415-558-3700</div>
-                    </div>
-
-                    <div class="station-item fire-station" data-station-id="fire7">
-                        <div class="station-name">Estación 7</div>
-                        <div class="station-address">461 Grove Street, San Francisco, CA 94102</div>
-                        <div class="station-phone">📞 415-558-3800</div>
-                    </div>
-
-                    <div class="station-item fire-station" data-station-id="fire8">
-                        <div class="station-name">Estación 8</div>
-                        <div class="station-address">36 Bluxome Street, San Francisco, CA 94107</div>
-                        <div class="station-phone">📞 415-558-3900</div>
-                    </div>
-
-                    <div class="station-item fire-station" data-station-id="fire9">
-                        <div class="station-name">Estación 9</div>
-                        <div class="station-address">2245 Jerrold Avenue, San Francisco, CA 94124</div>
-                        <div class="station-phone">📞 415-558-4000</div>
-                    </div>
-
-                    <div class="station-item fire-station" data-station-id="firesfo">
-                        <div class="station-name">Estación SFO</div>
-                        <div class="station-address">Building #650, West Field Road, SFO, CA 94128</div>
-                        <div class="station-phone">📞 650-821-7868</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 
     <script src="police.js"></script>

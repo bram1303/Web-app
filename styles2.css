@@ -1,0 +1,93 @@
+/* Enlaces */
+.linkcolor {
+    color: #000000;
+    text-decoration: none;
+}
+
+/* Estilos para las tarjetas */
+.container .card {
+    width: 16rem; 
+    max-width: 16rem;
+    min-width: 16rem; 
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    background: white;
+    overflow: hidden;
+    position: relative;
+    animation: fadeInUp 0.6s ease-out;
+    margin: 15px; 
+}
+
+.container .card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.container .card:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.container .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Imágenes de las tarjetas */
+.container .card .card-img-top {
+    height: 180px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+.container .card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+/* Cuerpo de las tarjetas */
+.container .card .card-body {
+    padding: 20px;
+    background: white;
+}
+
+.container .card .card-text {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.container .card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container .card a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: flex-start; 
+    gap: 20px; 
+    padding: 20px; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+/* Animación fadeInUp */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

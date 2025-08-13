@@ -19,14 +19,6 @@ body {
     max-width: none !important;
 }
 
-a {
-    color:#000000 !important;   
-    text-decoration: none !important;
-}
-
-h1 {
-    color:#000000;
-}
 
 /* Título h1 */
 .container h1 {
@@ -37,10 +29,6 @@ h1 {
     font-weight: 600 !important;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
 
-}
-/* Enlaces */
-.container a {
-    color: #000000 !important;
 }
 
 /* Container-fluid centrado */
@@ -78,7 +66,7 @@ h1 {
     border-radius: 15px !important;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
     transition: all 0.3s ease !important;
-    background: white !important;
+    background: rgb(255, 255, 255) !important;
     overflow: hidden !important;
     position: relative !important;
     animation: fadeInUp 0.6s ease-out !important;
@@ -176,6 +164,8 @@ h1 {
     
     .container .card .card-text {
         font-size: 12px !important;
+          font-weight: bold;
+
     }
 }
 
