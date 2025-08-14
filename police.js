@@ -80,7 +80,7 @@ async function getOneRecord(id) {
      
 
       let newHtml = `
-       <div class="card" style="width: 18rem;">
+       <div class="card single">
   ${
           image
             ? `<img class="card-img-top rounded" alt="${name}" src="${image[0].url}">`

@@ -67,7 +67,20 @@
     text-decoration: none;
     color: inherit;
 }
-
+ .container-fluid.tables {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+} 
 /* Contenedor principal */
 .container {
     display: flex;
@@ -90,4 +103,10 @@
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+
+.single {
+    width: 400px;
+
 }

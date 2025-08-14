@@ -76,7 +76,7 @@ async function getOneRecord(id) {
       let phone = data.fields["Phone"];
 
       let newHtml = `
-       <div class="card" style="width: 18rem;">
+       <div class="card single" style="width: 18rem;">
   ${
     image
       ? `<img class="card-img-top rounded" alt="${name}" src="${image[0].url}">`
